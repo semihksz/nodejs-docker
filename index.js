@@ -27,7 +27,7 @@ async function scrapeEmails(url) {
   const page = await browser.newPage();
 
   try {
-    console.log(`🔍 Sayfa açılıyorrrr: ${url}`);
+    console.log(`🔍 Sayfa açılıyor: ${url}`);
     await page.goto(url, { waitUntil: "networkidle2", timeout: 60000 });
     console.log("Sayfa yüklendi!");
     let lastHeight = await page.evaluate("document.body.scrollHeight");
